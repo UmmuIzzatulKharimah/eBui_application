@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 ">
+            <h2>Data News</h2>
+            <button routerLink="/list-news">List news</button>
+            <button routerLink="/add-news">Input news</button>
+            <hr>
+            <table border="1" width="100%">
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>DATE</th>
+                    <th>CONTENT</th>
+                    <th>IMAGE</th>
+                    <th>ACTION</th>
+                </tr>
+                    <tr *ngFor="let data of dataNews">
+                    <td>{{data.id}}</td>
+                    <td>{{data.title}}</td>
+                    <td>{{data.date}}</td>
+                    <td>{{data.content}}</td>
+                    <td>{{data.image}}</td>
+                    <td>
+                        <button routerLink="/edit-news/{{data.id}}">Edit</button>
+                        <button (click)="delete(data.id)">Hapus</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+
