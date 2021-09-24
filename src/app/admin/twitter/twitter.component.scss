@@ -1,0 +1,170 @@
+.uk-flex{ 
+    margin-left: 18px;
+  }
+  .uk-flex button{
+    width: 105px;
+    height: 32px;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 20px;
+    line-height: 131%;
+    align: Left;
+    vertical-align: Top;
+    fill: Solid;
+    color: #FFFFFF;
+    background: linear-gradient(#FF6968 0%,#FFA3A3 100%);
+    border-radius: 10px;
+    border-style: hidden;
+    padding: 6px, 14px, 6px, 14px;
+  }
+.mat-z4{
+    margin-left: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    max-height: 500px;
+}
+.image{
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+ }
+ .image img{
+    width: 32px;
+    height: 32px;
+ }
+ .profile{
+     top: 14px;
+     display: inline-block;
+     width: 55px;
+     height: 15px;
+     position: absolute;
+ }
+ .profile h2{
+     display: inline-block;
+     line-height: 15px;
+     margin-left: 10px;
+     font-style: medium;
+     font-size : 13px;
+     fill: Solid;
+     color: #0F123F;
+ }
+ .username{
+     top: 19px;
+     position: absolute;
+     display: inline-block;
+     margin-left: 60px;
+ }
+ .username h3{
+     font-size: 11px;
+     line-height: 13px;
+     color: #778192;
+ }
+ .titik{
+     top: 5px;
+     position: absolute;
+     display: inline-block;
+     margin-left: 170px;
+     
+ }
+ .titik h2{
+     width: 2px;
+     height: 2px;
+     display: inline-block;
+ }
+ .titik button{
+    border-style: none;
+    background-color:white;
+    font-size: 25px;
+ }
+ .tweet_content{
+    margin-top: 10px;
+    top: 5px;
+    width: 214px;
+    height: 36px;
+    
+ } 
+ .tweet_content p{
+    size: 11px;
+    line-height: 18px;
+    font-style: Regular;
+    font-size: 11px;
+    line-height: 18px;
+    line-height: 140%;
+    text-align: Left;
+    vertical-align: Top;
+ }
+ .tImage{
+    
+    margin-top: 40px;
+    max-height: 300px;
+    max-width: 400px;
+    
+ }
+ .tImage img{
+    border-radius: 10px;
+ }
+ .action-btn{
+    margin-top: 50px;
+    margin-left: 120px;
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+  .action-btn .update-btn{
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    display: inline-block;
+    position: absolute;
+    // background-color: #778192;
+  }
+  .update-btn button{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: white;
+    max-width: 120px;
+    margin: 5px;
+    text-align:center;
+    height: 20px;
+    background: orange;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  #btn-inner-update{
+    background-color: orange;
+    color: white;
+    border: none; 
+    width: 100px;
+  }
+  #btn-inner-delete{
+    background-color: red;
+    color: white;
+    border: none; 
+    width: 100px;
+  }
+  .action-btn .delete-btn{
+    margin-top: 0px;
+    margin-left: 55px;
+    padding-top: 0px;
+    padding-left: 0px;
+    display: inline-block;
+    // background-color: #778192;
+  }
+  .delete-btn button{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: white;
+    max-width: 120px;
+    margin: 5px;
+    text-align:center;
+    height: 20px;
+    background: red;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  

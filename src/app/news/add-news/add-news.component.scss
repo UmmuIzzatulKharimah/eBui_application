@@ -1,0 +1,306 @@
+
+.top-title{
+    display: inline-block;
+    margin-top: 34px;
+    margin-left: 200px;
+    width: 190px;
+    height: 23px;
+}
+.top-title h3{
+    font-family: Roboto;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 23px;
+    line-height: 100%;
+    align: Left;
+    vertical-align: Top;
+    fill: Solid;
+    color: #0F123F;
+    font-weight: 700;
+}
+.btn-publish{
+     display: inline-block;
+     margin-top: 34px;
+     margin-left: 119px;
+     
+}
+.btn-publish button{
+    background: linear-gradient(#FF6968 0%,#FFA3A3 100%);
+    width: 72px;
+    height: 32px;
+    padding: 6px, 14px, 6px, 14px;
+    border-radius: 10px;
+    border-style: hidden;
+    font-style: Medium;
+    font-family: Roboto;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 20px;
+    line-height: 131%;
+    align: Left;
+    vertical-align: Top;
+    fill: Solid;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.btn-cancel{
+    display: inline-block;
+    margin-top: 34px;
+    margin-left: 8px;
+    
+}
+.btn-cancel button{
+   background: white;
+   width: 72px;
+   height: 32px;
+   border-radius: 10px;
+   border-style: hidden;
+   padding: 6px, 14px, 6px, 14px;
+   border-radius: 10px;
+   border-style: hidden;
+   font-style: Medium;
+   font-family: Roboto;
+   font-style: Medium;
+   font-size: 13px;
+   line-height: 20px;
+   line-height: 131%;
+   align: Left;
+   vertical-align: Top;
+   fill: Solid;
+   color: #0F123F;
+   font-weight: 500;
+}
+
+form{
+    // position: absolute;
+    display: inline-block;
+    margin-top: 21px;
+    margin-left: 200px;
+    border-radius: 10px;
+    background-color: white;
+    width: 460px;
+    height: 650px;
+    padding: 16px;
+    
+}
+.form-group{
+    // height: 110px;
+}
+.form-group label{
+    font-family: Roboto;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 15px;
+    line-height: 100%;
+    align: Left;
+    vertical-align: Top;
+    fill: Solid;
+    color: #0F123F;
+    font-weight: 500;
+}
+.form-group input{
+    padding-top: 3px;
+    padding-left: 16px;
+}
+.form-group .form-control-title{
+    background-color:#EFF0F6;
+    border-radius: 10px;
+    width: 428px;
+    height: 39px;
+    margin-bottom: 10px;
+    border-style: hidden;
+    font-weight: 500;
+}
+.form-group .form-control-date{
+    background-color:#EFF0F6;
+    border-radius: 10px;
+    width: 428px;
+    height: 39px;
+    margin-bottom: 10px;
+    border-style: hidden;
+    font-weight: 500;
+}
+.form-group .form-control-desc{
+    background-color:#EFF0F6;
+    border-radius: 10px;
+    width: 428px;
+    height: 85px;
+    margin-bottom: 10px;
+    border-style: hidden;
+    font-weight: 500;
+}
+.form-group .form-control-content{
+    background-color:#EFF0F6;
+    border-radius: 10px;
+    width: 428px;
+    height: 330px;
+    margin-bottom: 10px;
+    border-style: hidden;
+    font-weight: 500;
+}
+
+.form2{
+    display: inline-block;
+    position: absolute;
+    margin-top: 21px;
+    margin-left: 20px;
+    
+    border-radius: 10px;
+    background-color: white;
+    width: 193px;
+    height: 213px;
+    padding-left: 16px;
+    padding-top: 16px;
+
+}
+.form2 h3{
+    // padding-left: 16px;
+    font-family: Roboto;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 15px;
+    line-height: 100%;
+    fill: Solid;
+    color: #0F123F;
+    width: 60px;
+    font-weight: 500;
+}
+.form2 .form-check{
+    // padding-left: 16px;
+
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 15px;
+    line-height: 100%;
+    fill: Solid;
+    color: #0F123F;
+    font-weight: 400;
+    margin-left: 5px;
+    width: 80px;
+}
+.form-check .example-radio-group{
+    margin-left: 0px;
+    border-color: aliceblue;
+}
+.example-radio-group .example-radio-button{
+    margin-bottom: 3px;
+}
+  
+.form3{
+    display: inline-block;
+    position: absolute;
+    margin-top: 245px;
+    margin-left: 20px;
+    
+    border-radius: 10px;
+    background-color: white;
+    width: 193px;
+    height: 211px;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+.form3 h3{
+    font-family: Roboto;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 15px;
+    line-height: 100%;
+    fill: Solid;
+    color: #0F123F;
+    width: 55px;
+    font-weight: 500;
+}
+.form3 .form-check{
+    padding-left: 16px;
+
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 15px;
+    line-height: 100%;
+    fill: Solid;
+    color: #0F123F;
+    font-weight: 400;
+    margin-left: 5px;
+    margin-right: 18px;
+    width: 70px;
+}
+.form4{
+    display: inline-block;
+    position: absolute;
+    margin-top: 470px;
+    margin-left: 20px;
+    
+    border-radius: 10px;
+    background-color: white;
+    width: 193px;
+    height: 180px;
+    
+}
+.form4 h3{
+    font-family: Roboto;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 15px;
+    line-height: 100%;
+    fill: Solid;
+    color: #0F123F;
+    width: 55px;
+    font-weight: 500;
+    margin-left: 16px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.form4 .upload-icon{
+    margin-top: 13px;
+    margin-left: 16px;
+    border-radius: 3px;
+    border:#BABEC6 1px dashed;
+    
+    position: relative;
+    width: 161px;
+    height: 120px;
+    color: #778192;
+}
+.upload-icon button{
+    position: absolute;
+    // text-align: center;
+   
+}
+button mat-icon{
+    margin-top: 18px; 
+    width: 28px;
+    bottom: 22px;
+    margin-left: 65px;
+}
+button h3{
+    margin-top: 0px; 
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 11px;
+    width: 107px;
+    margin-left: 10px;
+    line-height: 20px;
+    vertical-align: Top;
+    // letter-spacing: 0.4px;
+    fill: Solid;
+    color: #778192;
+    opacity: 50%;
+    padding: 0px;
+}
+button input{
+    margin-top: 5px; 
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 11px;
+    width: 150px;
+    margin-left: 5px;
+    line-height: 20px;
+    vertical-align: Top;
+    // letter-spacing: 0.4px;
+    fill: Solid;
+    color: #778192;
+    padding: 0px;
+}

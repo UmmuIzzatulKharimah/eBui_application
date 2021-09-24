@@ -1,0 +1,334 @@
+
+// MULTIPLE CARD AREA
+.my-card1{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 252px;
+    height: 130px;
+}
+.top-dashboard-logo{
+    padding-top: 20px;
+    padding-left: 20px;
+    display: inline-block;
+}
+.top-dashboard-logo img{
+    width: 53px;
+    height: 53px;
+    position: absolute;
+}
+
+.text-logo1{
+    top: 19px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 80px;
+}
+
+.text-logo1 h2{
+    text-align: Right;
+    font-weight: 500;
+    line-height: 16px;
+    font-style: medium;
+    font-size : 14px;
+    line-height: 16px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    fill: Solid;
+    color: #778192;
+}
+.text-logo1 h3{
+    font-style: Bold;
+    font-weight: 700;
+    text-align: Right;
+    margin-top: 0px;
+    font-size: 30px;
+    line-height: 35px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    fill: Solid;
+    color: #0F123F;
+}
+.text-logo1 h4{
+    font-style: Medium;
+    font-weight: 500;
+    margin-top: 1px;
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    text-align: Right;
+    letter-spacing: 2%;
+    fill: Solid;
+    color: #45D0AA;
+}
+.text-logo1 h5{
+    font-style: Medium;
+    font-weight: 500;
+    margin-top: 1px;
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    text-align: Right;
+    letter-spacing: 2%;
+    fill: Solid;
+    color: #FD524E;
+}
+
+// HISTOGRAM AREA
+.my-card2{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 766px;
+    height: 310px;
+}
+.my-card2 .title{
+    margin-top: 0px;
+    width: 75px;
+    height: 24px;
+    margin-bottom: 0px;
+    display: inline-block;
+    position: absolute;
+    
+    margin-left: 10px;
+    display: inline-block;
+}
+.title h3{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    height: 24px;
+    line-height: 128%;
+    text-align: Left;
+    vertical-align: Center;
+    fill: Solid;
+    color: #0F123F;
+}
+.my-card2 .title2{
+    margin-top: 0px;
+    width: 110px;
+    height: 24px;
+    margin-bottom: 0px;
+    display: inline-block;
+    position: absolute;
+    
+    margin-left: 530px;
+}
+.title2 h4{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    height: 24px;
+    line-height: 128%;
+    text-align: Left;
+    vertical-align: Center;
+    fill: Solid;
+    color: #0F123F;
+    display: inline-block;
+}
+.my-card2 .histo-area{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 500px;
+    height: 270px;
+    display: inline-block;
+    position: absolute;
+    
+}
+.my-card2 .chart-details{
+    margin-top: 30px;
+    margin-left: 520px;
+    display: inline-block;
+    
+    width: 214px;
+    height: 300px;
+    padding-left: 8px;
+    
+}
+.chart-details h4{
+    margin-top: 0px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    height: 24px;
+    text-align: Left;
+    vertical-align: Center;
+    fill: Solid;
+    color: #0F123F;
+    margin-bottom: 0px;
+    display: inline-block;
+    position: absolute;
+}
+//top
+.chart-details .img1{
+    display: inline-block;
+}
+.img1 img{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+}
+.chart-details .img1-text{
+    display: inline-block;
+    
+}
+.img1-text h3{
+    width: 34px;
+    height: 18px;
+    // font-weight: 400;
+    // position: absolute;
+    margin-left: 5px;
+    font-style: medium;
+    font-size : 13px;
+    fill: Solid;
+    margin-top: 0px;
+    color: #0F123F;
+    padding-right: 0px;
+    // opacity: 50%;
+    
+}
+.chart-details .img1-text2{
+    margin-top: 10px;
+    display: inline-block;
+    
+}
+.img1-text2 h3{
+    width: 60px;
+    height: 18px;
+    // position: absolute;
+    margin-left: 81px;
+    font-style: medium;
+    font-size : 13px;
+    fill: Solid;
+    color: #0F123F;
+    // opacity: 50%;
+}
+//bottom
+
+// NEWS UPLOADED AREA
+.tabel-1{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 766px;
+    height: 310px;
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.tabel-1 h3{
+    width:750px;
+    height: 48px;
+
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 46px;
+    margin-bottom: 0px;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 128%;
+    align: Left;
+    vertical-align: Center;
+    fill: Solid;
+    color: #0F123F;
+    font-weight: 500;
+    padding-top: 14px;
+    padding-left: 18px;
+    
+}
+.tabel-1 .mat-z8{
+    width: 766px;
+    height: 263px;
+}
+#kolom{
+    background-color: #FAFAFA;
+}
+
+.tabel-2{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 302px;
+    height: 311px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+}
+.tabel-2 h3{
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 46px;
+    margin-bottom: 0px;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 128%;
+    align: Left;
+    vertical-align: Center;
+    fill: Solid;
+    color: #0F123F;
+    font-weight: 500;
+    padding-top: 14px;
+    padding-left: 18px;
+}
+.tabel-2 .mat-z8{
+    width: 302px;
+    height: 263px;
+    border-radius: 10px;
+}
+
+// Doughnut AREA
+.my-card3{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 302px;
+    height: 311px;
+}
+.my-card3 h3{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    height: 24px;
+    line-height: 128%;
+    text-align: Left;
+    vertical-align: Center;
+    fill: Solid;
+    color: #0F123F;
+}
+.pie-chart{
+    width : 150.5px;
+    height : 149px;
+    margin-top : 35px;
+    margin-left  : 55px;
+}
+.pie-chart img{
+
+}
+.pie-chart-legend{
+    margin-left: 20px;
+    margin-top: 30px;
+    max-width: 500px;
+    max-height: 200px;
+    display: inline-block;
+}
+.pie-chart-legend img{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+.pie-chart-legend h2{
+    display: inline-block;
+    width: 54px;
+    height: 12px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 2px;
+    font-size: 13px;
+    line-height: 12px;
+    line-height: 79%;
+    letter-spacing: -0.2px;
+}
+
+
+

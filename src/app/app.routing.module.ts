@@ -1,17 +1,12 @@
 import { NgModule }               from '@angular/core';
 import { Routes, RouterModule }   from '@angular/router';
 import { CommonModule }           from '@angular/common';
-import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   {
-    path:'home',
-    component:HomeComponent
-  },
-  {
     path:'',
     pathMatch:'full',
-    redirectTo:'/home'
+    redirectTo:'/admin/home'
   },
   {
     path:'charts',
@@ -20,8 +15,11 @@ const appRoutes: Routes = [
   {
     path:'admin',
     loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
+  },
+  {
+    path:'news',
+    loadChildren:()=>import('./news/news.module').then(mod=>mod.NewsModule)
   }
-
 ];
 
 @NgModule({

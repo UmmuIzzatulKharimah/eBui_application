@@ -8,6 +8,7 @@ import { Inject } from '@angular/core';
   templateUrl: './dashboard-detail.component.html',
   styleUrls: ['./dashboard-detail.component.scss']
 })
+
 export class DashboardDetailComponent implements OnInit {
   
   constructor(
@@ -18,6 +19,7 @@ export class DashboardDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   saveData(){
     if(this.data.id == undefined){
       this.api.post('news', this.data).subscribe(result=>{

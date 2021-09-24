@@ -1,0 +1,222 @@
+<!-- Card Row -->
+<div class="row">
+    <mat-card class="my-card1">
+        <div class="top-dashboard-logo">
+            <img src="../assets/img/dashboard-top/averageimpression.svg">
+        </div> 
+        <div class="text-logo1">
+          <h2>Avg Impression</h2>
+          <h3>2.480</h3>
+          <h4>+10.80%</h4>
+        </div>
+    </mat-card> 
+
+    <mat-card class="my-card1">
+        <div class="top-dashboard-logo">
+            <img src="../assets/img/dashboard-top/newsgrowth.svg">
+        </div>
+        <div class="text-logo1">
+          <h2>Avg Engagements</h2>
+          <h3>10.290</h3>
+          <h4>+05.80%</h4>
+        </div>
+    </mat-card>
+
+    <mat-card class="my-card1">
+      <div class="top-dashboard-logo">
+          <img src="../assets/img/dashboard-top/averagereach.svg">
+      </div>
+      <div class="text-logo1">
+        <h2>Avg Reach</h2>
+        <h3>4.215</h3>
+        <h5>-10.80%</h5>
+      </div>
+    </mat-card>
+
+    <mat-card class="my-card1">
+        <div class="top-dashboard-logo">
+            <img src="../assets/img/dashboard-top/newsgrowth.svg">
+        </div>
+        <div class="text-logo1">
+          <h2>News Growth</h2>
+          <h3>230</h3>
+          <h4>+10.80%</h4>
+        </div>
+    </mat-card>
+    
+</div>
+
+<!-- Content -->
+<div class="row">
+    <mat-card class="my-card2">
+      <div class="title">
+        <h3>Histogram</h3>
+      </div>
+    
+      <div class="histo-area" style="display: block">
+        <canvas mdbChart
+            [chartType]="chartType1"
+            [datasets]="chartDatasets1"
+            [labels]="chartLabels1"
+            [colors]="chartColors1"
+            [options]="chartOptions"
+            [legend]="false"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+      </div>
+      
+      <div class="title2">
+        <h4>Chart Details</h4>
+      </div>
+
+      <div class="chart-details">
+
+        <div class="img1">
+          <img src="../assets/img/chart-detail/test1.svg">   
+        </div>
+        <div class="img1-text">
+          <h3>Test 1</h3>
+        </div>
+        <div class="img1-text2">
+          <h3>1 800 550</h3>
+        </div>
+
+        <div class="img1">
+          <img src="../assets/img/chart-detail/test2.svg">   
+        </div>
+        <div class="img1-text" style="opacity: 50%;"> 
+          <h3>Test 2</h3>
+        </div>
+        <div class="img1-text2" style="opacity: 50%;">
+          <h3>1 500 311</h3>
+        </div>
+
+        <div class="img1">
+          <img src="../assets/img/chart-detail/test3.svg">   
+        </div>
+        <div class="img1-text" style="opacity: 50%;">
+          <h3>Test 3</h3>
+        </div>
+        <div class="img1-text2" style="opacity: 50%;">
+          <h3>1 100 625</h3>
+        </div>
+
+        <div class="img1">
+          <img src="../assets/img/chart-detail/test4.svg">   
+        </div>
+        <div class="img1-text">
+          <h3>Test 4</h3>
+        </div>
+        <div class="img1-text2">
+          <h3>300 845</h3>
+        </div>
+        
+      </div>
+      
+
+    </mat-card>
+    <mat-card class="my-card3">
+      <h3>Media Share</h3>
+      <!-- <div class="pie-chart">
+        <img src="../assets/img/media-share/pie-chart.svg">   
+      </div> -->
+      <div class="pie-chart">
+        <div style="display: block">
+          <canvas mdbChart
+              [chartType]="chartType"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [datasets]="chartDatasets"
+              [legend]="false"
+              [labels]="chartLabels"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+      </div>
+      
+      
+        <div class="pie-chart-legend">
+          <img src="../assets/img/media-share/compass-pie-chart.svg">
+          <h2>Compass</h2>
+        </div>
+        <div class="pie-chart-legend">
+          <img src="../assets/img/media-share/okezone-pie-chart.svg">
+          <h2>Okezone</h2>
+        </div>
+        <div class="pie-chart-legend">
+          <img src="../assets/img/media-share/trans89-pie-chart.svg">
+          <h2>Trans89</h2>
+        </div>
+      
+    </mat-card>
+</div>
+
+<div class="row">
+      <div class="tabel-1">
+        
+        <h3>News Uploaded</h3> 
+
+        <table mat-table [dataSource]="dataSource1" class="mat-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- News Column -->
+            <ng-container matColumnDef="news">
+              <th mat-header-cell *matHeaderCellDef id="kolom"> NEWS </th>
+              <td mat-cell *matCellDef="let element"> {{element.news}} </td>
+            </ng-container>
+          
+            <!-- Date Column -->
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef id="kolom"> DATE </th>
+              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+          
+            <!-- Source Column -->
+            <ng-container matColumnDef="source">
+              <th mat-header-cell *matHeaderCellDef id="kolom"> SOURCE </th>
+              <td mat-cell *matCellDef="let element"> {{element.source}} </td>
+            </ng-container>
+          
+            <!-- Views Column -->
+            <ng-container matColumnDef="views">
+              <th mat-header-cell *matHeaderCellDef id="kolom"> VIEWS </th>
+              <td mat-cell *matCellDef="let element"> {{element.views}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+        </table>
+
+      </div>
+
+        <div class="tabel-2">
+          <h3>My Topics</h3>
+          <table mat-table [dataSource]="dataSource2" class="mat-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="topic">
+              <th mat-header-cell *matHeaderCellDef id="kolom"> TOPIC </th>
+              <td mat-cell *matCellDef="let element"> {{element.topic}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef id="kolom"> </th>
+              <!-- <td mat-cell *matCellDef="let element"> {{element.symbol}} </td> -->
+              <td mat-cell *matCellDef="let element"> <mat-icon matListIcon>{{fitur.icon}}</mat-icon></td>
+            </ng-container>
+          
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+          </table>
+        </div>
+
+</div>

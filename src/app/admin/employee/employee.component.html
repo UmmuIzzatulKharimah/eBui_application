@@ -1,0 +1,70 @@
+<div class="top-content-container">
+    
+    <div class="inner-bg"> 
+        <div class="uk-flex">
+            <span class="uk-width-expand">16 Result</span>
+            <button mat-flat-button color="primary" (click)="addEmployee({},-1)"> Add Employee</button>
+        </div>
+    </div>
+
+    <br>
+    <div class="content">
+        <div fxLayout ="row wrap" fxLayoutGap="16px"></div>
+        <div fxLayout = "row wrap">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of employees | paginate: {
+                itemsPerPage: tableSize, 
+                currentPage: page,
+                totalItems: count
+            };
+            let idx=index">
+            <mat-card class="mat-z4">
+                <mat-card-content>
+                    <div class="titik">
+                        <button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">...</button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>
+                              <!-- <mat-icon>delete</mat-icon> -->
+                              <!-- <span (click) = "deleteEmployee(employee.id, idx)">Delete</span> -->
+                              <button (click) = "deleteEmployee(employee.id, idx)" id="btn-inner-delete" >Delete</button>
+                              <!-- style="border: none; background-color: orange; color: white;" -->
+                            </button>
+                          </mat-menu>
+                    </div>
+                    <div class="image">
+                        <img src="{{employee.logo}}" alt="" style="width: 100%;">
+                    </div>
+                    <div class="name">
+                       <h3>{{(employee.first_name)+(employee.last_name)}}</h3> 
+                    </div>
+                    <div class="email">
+                        <h2>{{employee.email}}</h2>
+                    </div>
+                    <div class="button-view">
+                        <button mat-button (click) = "addEmployee(employee,idx)">View Profile</button>
+                    </div> 
+
+                </mat-card-content>
+               
+                
+
+                <!-- <mat-card-actions>
+                    <button mat-button color="primary" (click) = "addEmployee(employee,idx)">View Profile</button> -->
+                    <!-- <button mat-button color="warn" (click) = "deleteNews(news.id, idx)">Delete</button> -->
+                <!-- </mat-card-actions> -->
+            </mat-card>
+        </div>
+    </div>
+    
+    <br>
+    <div class="d-flex justify-content-center">
+        <pagination-controls
+            previousLabel=""
+            nextLabel=""
+            (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+    

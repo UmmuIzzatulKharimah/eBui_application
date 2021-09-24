@@ -1,0 +1,158 @@
+<div class="top-content-container">
+    
+    <!-- <div class="inner-bg">
+        <div class="uk-flex">
+            <span class="uk-width-expand">Explore Channels</span>
+            <button mat-flat-button color="primary" (click)="addNews({},-1)">Add news</button>
+            <button routerLink="add-news">Add News</button>
+        </div>
+    </div> -->
+    <div class="inner-bg">
+        <div class="uk-flex">
+            <span class="uk-width-expand">Explore Channels</span>
+            <button routerLink="/news/add-news">Add News</button>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+    
+    <div class="row">
+        <mat-card class="my-card4">
+            <div class="news-logo1"> 
+                <img src="../assets/img/news-items/MetroTV.svg">
+            </div>
+            <div class="news-title">
+                <h3>Metro TV News</h3>
+            </div>
+            <div class="news-number">
+                <h3>57.5K</h3>
+            </div>
+        </mat-card>
+        <mat-card class="my-card4">
+            <div class="news-logo2"> 
+                <img src="../assets/img/news-items/KompasTV.svg">
+            </div>
+            <div class="news-title2">
+                <h3>Kompas TV</h3>
+            </div>
+            <div class="news-number">
+                <h3>127.5K</h3>
+            </div>
+        </mat-card>
+        <mat-card class="my-card4">
+            <div class="news-logo3"> 
+                <img src="../assets/img/news-items/iNews.svg">
+            </div>
+            <div class="news-title3">
+                <h3>iNews</h3>
+            </div>
+            <div class="news-number">
+                <h3>27.5K</h3>
+            </div>
+        </mat-card>
+        <mat-card class="my-card4">
+            <div class="news-logo4"> 
+                <img src="../assets/img/news-items/TVOne.svg">
+            </div>
+            <div class="news-title4">
+                <h3>TV One</h3>
+            </div>
+            <div class="news-number">
+                <h3>17.4K</h3>
+            </div>
+        </mat-card>
+        <mat-card class="my-card4">
+            <div class="news-logo5"> 
+                <img src="../assets/img/news-items/RCTI.svg">
+            </div>
+            <div class="news-title5">
+                <h3>RCTI TV</h3>
+            </div>
+            <div class="news-number">
+                <h3>17.4K</h3>
+            </div>
+        </mat-card>
+        <mat-card class="my-card4">
+            <div class="news-logo6"> 
+                <img src="../assets/img/news-items/CNN.svg">
+            </div>
+            <div class="news-title">
+                <h3>CNN Indonesia</h3>
+            </div>
+            <div class="news-number">
+                <h3>17.4K</h3>
+            </div>
+        </mat-card>
+    </div>
+    <br>
+    <br>
+    <div class="uk-flex">
+        <span class="uk-width-expand">Kompas Headline</span>
+    </div>
+    
+    
+    <div class="content">
+        <div fxLayout ="row wrap" fxLayoutGap="0px"></div>
+        <div fxLayout = "row wrap">
+            <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let news of newss | paginate: {
+                itemsPerPage: tableSize, 
+                currentPage: page,
+                totalItems: count
+            };
+            let idx=index">
+            <mat-card class="mat-z4">
+
+                <div class="image">
+                    <img src="{{news.link_image}}" alt="" style="width: 100%;">
+                </div>
+
+                <div class="title">
+                    <!-- <h1>{{news.title_news}}</h1> -->
+                    <h1>{{ (news.title_news.length>35)? (news.title_news | slice:0:35)+'..':(news.title_news) }}</h1>
+                    <p>{{ (news.content_text.length>70)? (news.content_text | slice:0:70)+'..':(news.content_text) }}</p>
+                </div>
+                
+                <mat-card-content>
+                    <div class="media">
+                        <h2>{{news.media_name}}</h2>
+                    </div>
+                    <div class="category">
+                        <h2>{{news.category}}</h2>
+                    </div>
+                    <div class="date">
+                        <h2>{{ (news.date.length>10)? (news.date | slice:0:10):(news.date) }}</h2>
+                    </div>
+                    <div class="action-btn">
+                        <div class="update-btn">
+                            <button (click) = "addNews(news,idx)">Update</button>
+                        </div>
+                        <div class="delete-btn">
+                            <button (click) = "deleteNews(news.id, idx)">Delete</button>
+                        </div>
+                    </div>
+                    
+                </mat-card-content>
+                
+               
+
+                <!-- <mat-card-actions>
+                    <button mat-button color="primary" (click) = "addNews(news,idx)">Update</button>
+                    <button mat-button color="warn" (click) = "deleteNews(news.id, idx)">Delete</button>
+                </mat-card-actions> -->
+
+            </mat-card>
+
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <div class="d-flex justify-content-center">
+        <pagination-controls
+            previousLabel=""
+            nextLabel=""
+            (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>
+</div>
+
+    

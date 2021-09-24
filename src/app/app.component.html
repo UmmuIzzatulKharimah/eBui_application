@@ -1,20 +1,71 @@
-<div class="wrap">
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-11">
-                    <nav id="primary-nav" class="dropdown cf">
-                        <ul class="dropdown menu">
-                            <li ><a routerLink="/home">Home</a></li>
+<ng-container>
   
-                            <li><a routerLink="/admin/dashboard">News</a></li>
+    <mat-toolbar class="header">
+      <span class="title-header"></span>
+      <span class="spacer"></span>
+      <div class="logo-top-header">
+        <img src="../assets/img/search-icon.svg">
+      </div>
+      <div class="logo-top-header">
+        <img src="../assets/img/notif-icon.svg">
+      </div>
+      <img src="../assets/img/vertical.svg">
+      <button mat-button >Samantha</button>
+      <img src="../assets/img/samantha.svg">
+      <span class="spacer-2"></span>
+    </mat-toolbar>
+    
+    
+    <mat-sidenav-container class="example-container">
+    
+        <mat-sidenav #sidenav mode="side" [position]="'start'" opened class="sidenav-left"
+          [fixedInViewport]="true" [fixedTopGap]="0"
+          [fixedBottomGap]="0">
+      
+          <div class="logo-area">
+            <img src="../assets/img/Asset1.svg">
+          </div>
   
-                            <li><a routerLink="/charts/bar-chart">Chart</a></li>
-                        </ul>
-                    </nav><!-- / #primary-nav -->
-                </div>
+          <mat-nav-list>
+            <div class="bar-list" *ngFor="let item of menu">
+              <mat-list-item routerLink="{{item.url}}" routerLinkActive="active">
+                <mat-icon matListIcon>{{item.icon}}</mat-icon>
+                <h3 matLine>{{item.name}}</h3>
+              </mat-list-item>
             </div>
-        </div>
-    </header>
-  </div>
-<router-outlet></router-outlet>
+  
+            <div class="settings">
+              <div *ngFor="let itemSettings of settings">
+                <mat-list-item routerLink="{{itemSettings.url}}">
+                  <mat-icon matListIcon>{{itemSettings.icon}}</mat-icon>
+                  <h3 matLine>{{itemSettings.name}}</h3>
+                </mat-list-item>
+              </div>
+            </div>
+  
+          </mat-nav-list>
+      
+        </mat-sidenav>
+      
+      
+      <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-sidenav"
+      [fixedInViewport]="true" [fixedTopGap]="60"
+      [fixedBottomGap]="0">
+      </mat-sidenav>
+  
+      
+      <mat-sidenav-content style="padding: 20px; background-color:#F8F8FF;">
+  
+        
+        <router-outlet></router-outlet>
+  
+      </mat-sidenav-content>
+  
+      
+    </mat-sidenav-container>  
+  
+  </ng-container>
+    
+    
+    
+    

@@ -1,0 +1,173 @@
+<!-- <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="title_news">Title</label>
+        <input type="text" [(ngModel)]="news.title_news" class="form-control" id="judul" name="judul" placeholder="Enter News Title">
+    </div>
+
+    <div class="form-group">
+        <label for="media_name">Media Name</label>
+        <input type="text" [(ngModel)]="news.media_name" class="form-control" id="media_name" name="judul" placeholder="Enter Media Name">
+    </div>
+
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" [(ngModel)]="news.date" class="form-control" id="judul" name="judul" placeholder="Enter News Date">
+    </div>
+    <div class="form-group">
+        <label for="content_text">Content</label>
+        <input type="text" [(ngModel)]="news.content_text" class="form-control" id="judul" name="content_text" placeholder="Enter News content text">
+    </div>
+    <div class="form-group">
+        <label for="link_image">Link Image</label>
+        <input type="text" [(ngModel)]="news.link_image" class="form-control" id="judul" name="link_image" placeholder="Enter News link image">
+    </div>
+    <div class="form-group">
+        <br>
+        <br>
+        <button (click)="saveData()">publish</button>
+    </div>
+</form> -->
+
+<div class="top-title">
+    <h3>Add News Content</h3>
+</div>
+<div class="btn-publish">
+    <button (click)="saveData()">Publish</button>
+</div>
+<div class="btn-cancel">
+    <button  (click)="clearData()">Cancel</button>
+</div>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="title_news">Title</label>
+        <input type="text" [(ngModel)]="news.title_news" class="form-control-title" name="title_news" placeholder="Enter News Title">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" [(ngModel)]="news.description" class="form-control-desc"  name="description" placeholder="Enter Description">
+    </div>
+
+    <div class="form-group">
+        <label for="content_news">Content</label>
+        <input type="text" [(ngModel)]="news.content_text" class="form-control-content"  name="content_text" placeholder="Enter News Content">
+    </div>
+
+
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" [(ngModel)]="news.date" class="form-control-date" id="judul" name="judul" placeholder="Enter News Date">
+    </div>
+
+    <!-- <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" [(ngModel)]="newsCategory" class="form-control-title" id="judul" name="category" placeholder="Enter News Category">
+    </div> -->
+
+    <!-- <div class="form-group">
+        <label for="link_image">Link Image</label>
+        <input type="text" [(ngModel)]="news.link_image" class="form-control-title" id="judul" name="link_image" placeholder="Enter News link image">
+    </div> -->
+
+</form>
+
+<div class="form2">
+    <h3>Channels</h3>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.media_name" name="exampleRadios" id="exampleRadios1" value="Metro TV" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            Metro TV
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.media_name" name="exampleRadios" id="exampleRadios2" value="Kompas">
+        <label class="form-check-label" for="exampleRadios2">
+            Kompas
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.media_name" name="exampleRadios" id="exampleRadios2" value="CNN">
+        <label class="form-check-label" for="exampleRadios2">
+            CNN
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.media_name" name="exampleRadios" id="exampleRadios2" value="TV One">
+        <label class="form-check-label" for="exampleRadios2">
+            TV One
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.media_name" name="exampleRadios" id="exampleRadios2" value="RCTI">
+        <label class="form-check-label" for="exampleRadios2">
+            RCTI
+        </label>
+    </div>
+
+      <!-- <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+        <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+          {{season}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div class="example-selected-value">Your favorite season is: {{favoriteSeason}}</div>
+       -->
+</div>
+
+<div class="form3">
+    <h3>Categories</h3>
+    
+    <!-- <div class="form-check">
+        <input class="form-check-input" type="radio"  [(ngModel)]="news.category" name="exampleRadios" id="exampleRadios1" value="Business" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            Business
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.category" name="exampleRadios" id="exampleRadios2" value="Education">
+        <label class="form-check-label" for="exampleRadios2">
+            Education
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.category" name="exampleRadios" id="exampleRadios2" value="Sport">
+        <label class="form-check-label" for="exampleRadios2">
+            Sport
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.category" name="exampleRadios" id="exampleRadios2" value="Lifestyle">
+        <label class="form-check-label" for="exampleRadios2">
+            Lifestyle
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="news.category" name="exampleRadios" id="exampleRadios2" value="Politics">
+        <label class="form-check-label" for="exampleRadios2">
+            Politics
+        </label>
+    </div> -->
+
+    <div class="form-check">
+        <mat-radio-group class="example-radio-group" [(ngModel)]="newsCategory">
+            <mat-radio-button class="example-radio-button" *ngFor="let category of categories" [value]="category">
+              {{category}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+      
+
+</div>
+<div class="form4">
+    <h3>Picture</h3>
+    <div class="upload-icon">
+           <button mat-icon-button>
+               <mat-icon>image</mat-icon>
+               <h3>Drag or Upload  Files</h3> 
+               <input type="file" (change)="selectFile($event)">
+           </button>
+    </div>
+    
+</div>
+   
+    
+

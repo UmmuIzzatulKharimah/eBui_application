@@ -1,0 +1,87 @@
+.header{
+  position: fixed;
+  background-color: #F8F8FF;
+}
+
+.logo-top-header{
+margin-right: 20px;
+}
+
+.title-header{
+margin-left: 210px;
+}
+
+.logo-area{
+margin-top: 15px;
+margin-left: 29px;
+width: 120px;
+height: 32px;
+}
+
+
+mat-nav-list{
+margin-top:20px;
+font-family: 'Roboto', sans-serif;
+}
+
+.bar-list :hover{
+background:linear-gradient(#FF6968 0%,#FFA3A3 100%);
+transition: 0s;
+border-radius: 10px
+}
+.settings :hover {
+background:linear-gradient(#FF6968 0%,#FFA3A3 100%);
+transition: 0s;
+border-radius: 10px
+}
+
+mat-nav-list h3{
+color:white;
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+}
+
+mat-nav-list mat-icon{
+color:white;
+
+}
+.settings{
+margin-top: 175px;
+}
+
+.id-sidebar{
+position: fixed;
+text-decoration-color: #F8F8FF;
+}
+.example-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  
+}
+.sidenav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  // background-color: gray;
+  background-color: #0F123F;
+}
+
+mat-list-item.active{
+  background:linear-gradient(90deg, #FF6968 0%, #FFA3A3 100%);
+  box-shadow: 0px 20px 55px rgba(238, 120, 108, 0.25);
+  border-radius: 10px;
+}
