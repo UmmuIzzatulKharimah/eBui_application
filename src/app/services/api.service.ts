@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-  //serverUrl='http://localhost:5000/api/v1/'
-  serverUrl='http://192.168.29.91:5004/api/v1/'
+  serverUrl='http://localhost:5000/api/v1/'
+  // serverUrl='http://192.168.29.91:5004/api/v1/'
 
   constructor(
     public http: HttpClient
