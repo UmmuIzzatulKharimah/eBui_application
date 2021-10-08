@@ -22,12 +22,12 @@ export class DashboardDetailComponent implements OnInit {
   
   saveData(){
     if(this.data.id == undefined){
-      this.api.post('news', this.data).subscribe(result=>{
+      this.api.create('news', this.data).subscribe(result=>{
       this.dialogRef.close(result);
     });
     }
     else{
-      this.api.put('news/'+this.data.id,this.data).subscribe(result=>{
+      this.api.update(this.data.id,this.data,'news').subscribe(result=>{
       this.dialogRef.close(result);
        console.log(result);
       })

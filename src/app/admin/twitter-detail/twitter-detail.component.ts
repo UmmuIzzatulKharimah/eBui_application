@@ -22,12 +22,12 @@ export class TwitterDetailComponent implements OnInit {
 
   saveData(){
     if(this.data.id == undefined){
-      this.api.post('twitter', this.data).subscribe(result=>{
+      this.api.create('twitter', this.data).subscribe(result=>{
       this.dialogRef.close(result);
     });
     }
     else{
-      this.api.put('twitter/'+this.data.id,this.data).subscribe(result=>{
+      this.api.update(this.data.id,this.data,'twitter').subscribe(result=>{
       this.dialogRef.close(result);
        console.log(result);
       })

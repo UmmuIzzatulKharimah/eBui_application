@@ -11,14 +11,19 @@ import { EmployeeDetailComponent } from '../employee-detail/employee-detail.comp
 })
 export class EmployeeComponent implements OnInit {
 
+  employeeControllers: any=[];
+  currentTutorial = null;
+  currentIndex = -1;
+  first_name = '';
+
   page = 1;
   count = 0;
   tableSize = 16;
   tableSizes = [3, 6, 9, 16];
 
-  title: any;
-  employee: any={};
-  employees:any=[];
+  // title: any;
+  // employee: any={};
+  // employees:any=[];
 
   constructor(
     public dialog: MatDialog,
@@ -26,12 +31,48 @@ export class EmployeeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getEmployee();
+    // this.getEmployee();
+    this.retrieveTutorials();
   }
-  getEmployee(){
-    this.api.get('employee').subscribe(result=>{
-      this.employees=result;
-    })
+
+  // getEmployee(){
+  //   this.api.get('employee').subscribe(result=>{
+  //     this.employees=result;
+  //   })
+  // }
+
+  getRequestParams(searchTitle, page, tableSize): any {
+    // tslint:disable-next-line:prefer-const
+    let params = {};
+
+    if (searchTitle) {
+      params[`first_name`] = searchTitle;
+    }
+
+    if (page) {
+      params[`page`] = page - 1;
+    }
+
+    if (tableSize) {
+      params[`size`] = tableSize;
+    }
+
+    return params;
+  }
+  retrieveTutorials(): void {
+    const params = this.getRequestParams(this.first_name, this.page, this.tableSize);
+
+    this.api.getAll(params,'employee')
+      .subscribe(
+        response => {
+          const { employeeControllers, totalItems } = response;
+          this.employeeControllers = employeeControllers;
+          this.count = totalItems;
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
   addEmployee(data,idx){
@@ -42,9 +83,9 @@ export class EmployeeComponent implements OnInit {
     dialog.afterClosed().subscribe(res=>{
       if(res){
         //jika idx = -1 (penambahan data baru) maka tambahkan data 
-        if(idx == -1) this.employees.push(res);
+        if(idx == -1) this.employeeControllers.push(res);
         //jika tidak maka perbarui data 
-        else this.employees[idx]=data;
+        else this.employeeControllers[idx]=data;
       }
     })
   }
@@ -53,20 +94,22 @@ export class EmployeeComponent implements OnInit {
     var conf = confirm('Delete item?');
     if (conf){
         this.api.delete('employee/'+id).subscribe(res=>{
-        this.employees.splice(idx,1);
+        this.employeeControllers.splice(idx,1);
       });
     }
   }
 
   onTableDataChange(event){
     this.page = event;
-    this.getEmployee();
+    // this.getEmployee();
+    this.retrieveTutorials();
   }
   
   onTableSizeChange(event): void {
     this.tableSize = 16;
     this.page = 1;
-    this.getEmployee();
+    // this.getEmployee();
+    this.retrieveTutorials();
   }  
 
 }

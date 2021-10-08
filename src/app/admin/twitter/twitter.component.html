@@ -7,6 +7,21 @@
         </div>
     </div>
 
+    <div class="search-bar">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="name"/>
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="retrieveTutorials()">
+          Search
+        </button>
+      
+    </div>
+
     <!-- <div class="d-flex flex-row-reverse bd-highlight mb-2">
         <div class="p-2 bd-highlight">
             <select (change)="onTableSizeChange($event)" class="custom-select">
@@ -20,7 +35,7 @@
     <div class="content">
 
         <div fxLayout = "row wrap">
-            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let twitter of twitters | paginate: {
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let twitter of twitterControllers | paginate: {
                 itemsPerPage: tableSize, 
                 currentPage: page,
                 totalItems: count

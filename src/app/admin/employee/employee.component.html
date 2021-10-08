@@ -7,11 +7,27 @@
         </div>
     </div>
 
+    <div class="search-bar">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="first_name"/>
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="retrieveTutorials()">
+          Search
+        </button>
+      
+    </div>
+   
+
     <br>
     <div class="content">
         <div fxLayout ="row wrap" fxLayoutGap="16px"></div>
         <div fxLayout = "row wrap">
-            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of employees | paginate: {
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of employeeControllers | paginate: {
                 itemsPerPage: tableSize, 
                 currentPage: page,
                 totalItems: count

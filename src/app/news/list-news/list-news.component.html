@@ -14,7 +14,22 @@
         </div>
         <router-outlet></router-outlet>
     </div>
-    
+
+    <div class="search-bar">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="title_news"/>
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="retrieveTutorials()">
+          Search
+        </button>
+      
+    </div>
+
     <div class="row">
         <mat-card class="my-card4">
             <div class="news-logo1"> 
@@ -93,7 +108,7 @@
     <div class="content">
         <div fxLayout ="row wrap" fxLayoutGap="0px"></div>
         <div fxLayout = "row wrap">
-            <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let news of newss | paginate: {
+            <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let news of newsControllers | paginate: {
                 itemsPerPage: tableSize, 
                 currentPage: page,
                 totalItems: count

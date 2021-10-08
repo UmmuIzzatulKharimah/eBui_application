@@ -61,7 +61,7 @@ export class AddNewsComponent implements OnInit {
       
     };
   
-    this.api.post('news', data).subscribe(result=>{
+    this.api.create('news', data).subscribe(result=>{
       this.news=result;
       this.submitted=true;
     })

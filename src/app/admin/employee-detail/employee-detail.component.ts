@@ -22,12 +22,12 @@ export class EmployeeDetailComponent implements OnInit {
 
   saveData(){
     if(this.data.id == undefined){
-      this.api.post('employee', this.data).subscribe(result=>{
+      this.api.create('employee', this.data).subscribe(result=>{
       this.dialogRef.close(result);
     });
     }
     else{
-      this.api.put('employee/'+this.data.id,this.data).subscribe(result=>{
+      this.api.update(this.data.id,this.data,'employee').subscribe(result=>{
       this.dialogRef.close(result);
        console.log(result);
       })
